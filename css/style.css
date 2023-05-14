@@ -211,7 +211,11 @@ button:hover {
 }
 .item {
     padding: 0 23px 0;
-}
+}/*
+.special a::after {
+    content: "tag";
+    text-decoration: underline ;
+}*/
 .special .line {
     position: relative;
     width: 100%;
@@ -360,13 +364,37 @@ button:hover {
 .section-fifth .item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.item .note-box {
+    position:absolute;
+    width: 370px;
+    height: 294px;
+    overflow: hidden;
+}
+.item .note {
+    position: absolute;
+    width: 370px;
+    height: 294px;
+    background-color: var(--blue-color);
+    border-radius: 3px;
+    opacity: 0.9;
+    transform: translateY(100%);
+    transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 23px 45px 45px 23px;
+    font-family: 'Roboto', sans-serif;
+}
+.item:hover .note {
+    transform: translateY(0);
+}
 .backdrop {
     position: fixed;
     height: 100%;
     width: 100%;
     top: 0%;
     right: 0%;
-    animation: backdropOpen 2s forwards 1 ease-in-out;
+    animation: backdropOpen 1s forwards 1 ease-in-out;
 }
 .modal {
     position: fixed;
@@ -377,7 +405,7 @@ button:hover {
     background-color:var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    animation: modalOpen 2s forwards 1 ease-in-out;
+    animation: modalOpen 1s forwards 1 ease-in-out;
 }
 .btm {
     position: relative;
@@ -394,7 +422,7 @@ button:hover {
 }
 @keyframes backdropOpen {
     0% {
-        background-color: rgba(255, 255, 255, 0)
+        background-color: transparent;
     }
     100% {
         background-color:rgba(0, 0, 0, 0.4);
@@ -403,7 +431,7 @@ button:hover {
 @keyframes modalOpen {
     0% {
         transform: scale(0);
-        background-color: rgba(255, 255, 255, 0)
+        background-color: transparent;
     }
     100% {
         transform: scale(1);
