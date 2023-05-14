@@ -17,7 +17,7 @@
                 <a class="box" href="https://bgal23.github.io/goit-markup-hw-05/"><h4 class="logo"><span class="blue">Web</span>Studio</h4></a><!--Główny link-->
                 <nav><!--Nawigacja do podstron-->
                     <ul class="box">
-                        <li class="item"><a class="link" href="https://bgal23.github.io/goit-markup-hw-05/">Agencja</a></li>
+                        <li class="item special"><div class="line"></div><a class="link" href="https://bgal23.github.io/goit-markup-hw-05/">Agencja</a></li>
                         <li class="item"><a class="link" href="./portfolio.html">Portfolio</a></li>
                         <li class="item"><a class="link" href="./kontakt.html">Kontakt</a></li>
                     </ul>
@@ -33,19 +33,16 @@
         <section class="section-first"><!--Dzieli strone na sekcje-->
             <div class="container">
                 <h1 class="item">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-                <button class="order" type="button">Zamów usługe</button><!--Przycisk-->
+                <button class="order" type="button" data-modal-open>Zamów usługe</button><!--Przycisk-->
             </div>
         </section>
         <section class="section-second">
             <div class="container">
                 <ul class="box">
                     <li><svg class="icon" viewBox="0 0 100 160 "><use href="./images/icons.svg#icon-antenna"></use></svg><h4 class="font">Lorem, ipsum.</h4><p class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero voluptate neque, mollitia voluptas labore dicta cumque quam hic veritatis quasi est nihil tempore amet! Est, dolor alias! Praesentium, maxime?</p></li>
-                    <li><svg class="icon" viewBox="0 0 100 160 "><use href="./images/icons.svg#icon-clock"></use></svg><h4 class="font">Lorem, ipsum.</h4>
-                    <p class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero voluptate neque, mollitia voluptas labore dicta cumque quam hic veritatis quasi est nihil tempore amet! Est, dolor alias! Praesentium, maxime?</p></li>
-                    <li><svg class="icon" viewBox="0 0 100 160 "><use href="./images/icons.svg#icon-diagram"></use>
-                    </svg><h4 class="font">Lorem, ipsum.</h4><p class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero voluptate neque, mollitia voluptas labore dicta cumque quam hic veritatis quasi est nihil tempore amet! Est, dolor alias! Praesentium, maxime?</p></li>
-                    <li><svg class="icon" viewBox="0 0 100 160 "><use href="./images/icons.svg#icon-astronaut"></use>
-                    </svg><h4 class="font">Lorem, ipsum.</h4><p class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero voluptate neque, mollitia voluptas labore dicta cumque quam hic veritatis quasi est nihil tempore amet! Est, dolor alias! Praesentium, maxime?</p></li>
+                    <li><svg class="icon" viewBox="0 0 100 160 "><use href="./images/icons.svg#icon-clock"></use></svg><h4 class="font">Lorem, ipsum.</h4><p class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero voluptate neque, mollitia voluptas labore dicta cumque quam hic veritatis quasi est nihil tempore amet! Est, dolor alias! Praesentium, maxime?</p></li>
+                    <li><svg class="icon" viewBox="0 0 100 160 "><use href="./images/icons.svg#icon-diagram"></use></svg><h4 class="font">Lorem, ipsum.</h4><p class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero voluptate neque, mollitia voluptas labore dicta cumque quam hic veritatis quasi est nihil tempore amet! Est, dolor alias! Praesentium, maxime?</p></li>
+                    <li><svg class="icon" viewBox="0 0 100 160 "><use href="./images/icons.svg#icon-astronaut"></use></svg><h4 class="font">Lorem, ipsum.</h4><p class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero voluptate neque, mollitia voluptas labore dicta cumque quam hic veritatis quasi est nihil tempore amet! Est, dolor alias! Praesentium, maxime?</p></li>
                 </ul>
             </div>
         </section>
@@ -53,9 +50,9 @@
             <div class="container">
                 <h2 class="big-font">Czym sie zajmujemy</h2>
                 <ul class="box">
-                    <li class="item"><img src="./images/img1.1.jpg" width="370" height="294" alt="keboard"></li><!--Zdjęcia-->
-                    <li class="item"><img src="./images/img1.2.jpg" width="370" height="294" alt="phone"></li>
-                    <li class="item"><img src="./images/img1.3.jpg" width="370" height="294" alt="tablet"></li>
+                    <li class="item"><img src="./images/img1.1.jpg" width="370" height="294" alt="keboard"><div class="label">Aplikacje Komputerowe</div></li><!--Zdjęcia-->
+                    <li class="item"><img src="./images/img1.2.jpg" width="370" height="294" alt="phone"><div class="label">Aplikacje Mobilne</div></li>
+                    <li class="item"><img src="./images/img1.3.jpg" width="370" height="294" alt="tablet"><div class="label">Rozwiązania graficzne</div></li>
                 </ul>
             </div>
         </section>
@@ -103,5 +100,11 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal scale">
+                <button type="button" data-modal-close>X</button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
