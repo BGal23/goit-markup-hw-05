@@ -366,11 +366,7 @@ button:hover {
     width: 100%;
     top: 0%;
     right: 0%;
-    animation-name: backdrop;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: backdropOpen 2s forwards 1 ease-in-out;
 }
 .modal {
     position: fixed;
@@ -381,18 +377,22 @@ button:hover {
     background-color:var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    animation-name: modal;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: modalOpen 2s forwards 1 ease-in-out;
+}
+.btm {
+    position: relative;
+    right: -93%;
+    top: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
 }
 .is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
-@keyframes backdrop {
+@keyframes backdropOpen {
     0% {
         background-color: rgba(255, 255, 255, 0)
     }
@@ -400,12 +400,11 @@ button:hover {
         background-color:rgba(0, 0, 0, 0.4);
     }
 }
-@keyframes modal {
+@keyframes modalOpen {
     0% {
         transform: scale(0);
         background-color: rgba(255, 255, 255, 0)
     }
-
     100% {
         transform: scale(1);
     }
